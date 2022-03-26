@@ -72,7 +72,7 @@
 				while($strSQL = mysqli_fetch_assoc($base)) { 
 					echo '<div class="book wow animate__animated animate__fadeInRight">'
 					?>             
-                        <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>" </div>
+                        <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
                         <div class="book_inf"> 
                             <div class="book_name"> 
                                 <?php echo $strSQL['name']; ?>

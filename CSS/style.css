@@ -20,14 +20,23 @@
 
 .header_body{
 	font: 120% Verdana, sans-serif;
+	margin-left: 100px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
     flex-direction: row;
 }
 
 .header_logo{
-	width: 30%;
+	width: 200px;
 	height: 30%;
+	margin: 2.5px 0px 0px 0px;
+	padding: 5px 0px;
+	display: block;
+}
+
+.header_logo img{
+	width: 178px;
+	height: 86px;
 	margin: 2.5px 0px 0px 0px;
 	padding: 5px 0px;
 	display: block;
@@ -99,4 +108,29 @@
 
 .book_folk{
 	padding: 20px 0px 0px 20px; 
+}
+
+.book{
+	font: 120% Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+    flex-direction: row;
+
+	background: #F0FFFF;
+	border: solid black;
+	border-right: none;
+
+	padding: 8px 150px 8px 0px;
+	margin-left: 700px;
+	width: 900px;
+} 
+
+.book_inf{
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.book_name{
+	font: 200% Verdana, sans-serif;
+	color: #0047AB;
 }
