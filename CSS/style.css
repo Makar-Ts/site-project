@@ -1,0 +1,96 @@
+.container{
+    width: 1980px;
+}
+
+.background {
+	background: rgb(173,216,230);
+	background: linear-gradient(180deg, rgba(173,216,230,1) 26%, rgba(240,255,255,1) 74%, rgba(240,255,255,1) 100%);
+}
+
+/*====================================================*/
+
+.header{
+    width: 100%;
+    background-color: #ADD8E6;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.header_body{
+	font: 120% Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+    flex-direction: row;
+}
+
+.header_logo{
+	width: 30%;
+	height: 30%;
+	margin: 2.5px 0px 0px 0px;
+	padding: 5px 0px;
+	display: block;
+}
+
+.header_list{
+	list-style-type: none;
+	display: flex;
+	margin: 20px 25px;
+	margin-top: 40px;
+}
+
+.header_link{
+	margin: 0px -3px 0px 0px;
+	padding: 17px 50px;
+	text-decoration: none;
+	border: solid black;
+	border-top: none;
+	border-bottom: none;
+	white-space: nowrap;
+}
+.header_link:hover{ background-color: #A7C7E7; }
+
+/*====================================================*/
+
+.about{
+	height: auto;
+	display: flex;
+	padding-top: 10px;
+	margin-top: 80px;
+
+	font: 120% Verdana, sans-serif;
+}
+
+.about_body{
+	padding: 40px 0px 0 500px;
+	margin-right: 500px;
+	margin-top: 30px;
+
+	background: #F0FFFF;
+
+	border: solid black;
+	border-left: none;
+}
+
+.another_about{
+	margin: 5px 0 0 0;
+}
+
+.about_pros_menu{
+	padding-left: 40px;
+	margin-bottom: 54px;
+	font-weight: bold;
+}
+
+.about_button{
+	font: 80% Verdana, sans-serif;
+	width: 30%;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #6495ED;
+	margin-top: 10px;
+	margin-bottom: 54px;
+}
+.about_button:hover{ background-color: #6082B6; }
+.about_button:active{ background-color: #0047AB; }
