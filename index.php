@@ -70,9 +70,20 @@
 			<?php 
 				$base = mysqli_query($connect, "SELECT * FROM `books`");
 				while($strSQL = mysqli_fetch_assoc($base)) { 
-					echo '<div class="book">'
+					echo '<div class="book wow animate__animated animate__fadeInRight">'
 					?>             
-						
+                        <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>" </div>
+                        <div class="book_inf"> 
+                            <div class="book_name"> 
+                                <?php echo $strSQL['name']; ?>
+                            </div>
+                            <div class="book_author"> 
+                                <p>Автор: <?php echo $strSQL['author']; ?> </p>
+                            </div>
+                            <div class="book_rate"> 
+                                <p>Оценка: <?php echo $strSQL['rate'] ?>/5 </p>
+                            </div>
+                        </div>
 					<?php
 					echo '</div>';
 				} 

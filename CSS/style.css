@@ -94,3 +94,9 @@
 }
 .about_button:hover{ background-color: #6082B6; }
 .about_button:active{ background-color: #0047AB; }
+
+/*====================================================*/
+
+.book_folk{
+	padding: 20px 0px 0px 20px; 
+}
