@@ -72,14 +72,14 @@
 }
 
 .about_body{
-	padding: 40px 0px 0 500px;
-	margin-right: 500px;
+	padding: 40px 500px 0px 40px;
+	margin-left: 500px;
 	margin-top: 30px;
 
 	background: #F0FFFF;
 
 	border: solid black;
-	border-left: none;
+	border-right: none;
 }
 
 .another_about{
@@ -107,7 +107,7 @@
 /*====================================================*/
 
 .book_folk{
-	padding: 20px 0px 0px 20px; 
+	padding: 20px 0px 0px 0px; 
 }
 
 .book{
@@ -117,20 +117,46 @@
 
 	background: #F0FFFF;
 	border: solid black;
-	border-right: none;
+	border-left: none;
 
-	padding: 8px 150px 8px 8px;
-	margin-left: 700px;
+	padding: 8px 8px 8px 410px;
+	margin-right: 600px;
 	margin-top: 20px;
-	width: 900px;
+	width: 1000px;
 } 
 
 .book_inf{
-	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 5px;
+	text-align: right;	
 }
 
 .book_name{
 	font: 200% Verdana, sans-serif;
 	color: #0047AB;
+}
+
+.book_delete_button{
+	
+}
+
+/* Rate classes */
+
+.book_rate_1 {
+	color: red;
+}
+
+.book_rate_2 {
+	color: orangered;
+}
+
+.book_rate_3 {
+	color: orange;
+}
+
+.book_rate_4 {
+	color: #80AD00;
+}
+.book_rate_5 {
+	color: rgb(145, 214, 42);
 }

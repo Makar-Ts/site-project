@@ -44,7 +44,7 @@
 
 	<div id="about" class="about">
         <div class="container">
-            <div class="about_body wow animate__animated animate__fadeInLeft">
+            <div class="about_body wow animate__animated animate__fadeInRight">
                 <div class="main_about">
                     <h1>Онлайн библиотека COOP-lib</h1>
                 </div>
@@ -70,9 +70,8 @@
 			<?php 
 				$base = mysqli_query($connect, "SELECT * FROM `books`");
 				while($strSQL = mysqli_fetch_assoc($base)) { 
-					echo '<div class="book wow animate__animated animate__fadeInRight">'
+					echo '<div class="book wow animate__animated animate__fadeInLeft">'
 					?>             
-                        <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
                         <div class="book_inf"> 
                             <div class="book_name"> 
                                 <?php echo $strSQL['name']; ?>
@@ -81,9 +80,11 @@
                                 <p>Автор: <?php echo $strSQL['author']; ?> </p>
                             </div>
                             <div class="book_rate"> 
-                                <p>Оценка: <?php echo $strSQL['rate'] ?>/5 </p>
+                                <p>Оценка: <p class="<?php echo ("book_rate_" . (string)$strSQL['rate']); ?>"><?php echo $strSQL['rate'] ?>/5</p> </p>
                             </div>
+                            <div class="book_delete_button"> <button> <img src="content/trash_can.png"> </button> </div>
                         </div>
+                        <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
 					<?php
 					echo '</div>';
 				} 
