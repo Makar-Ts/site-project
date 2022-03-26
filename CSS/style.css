@@ -113,15 +113,15 @@
 .book{
 	font: 120% Verdana, sans-serif;
 	display: flex;
-	justify-content: center;
     flex-direction: row;
 
 	background: #F0FFFF;
 	border: solid black;
 	border-right: none;
 
-	padding: 8px 150px 8px 0px;
+	padding: 8px 150px 8px 8px;
 	margin-left: 700px;
+	margin-top: 20px;
 	width: 900px;
 } 
 
