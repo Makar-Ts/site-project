@@ -87,6 +87,14 @@
                             <div class="book_action_button"> <button type="button" onclick="edit_book(event)"> <img src="content/edit.png"> </button> </div>
                         </div>
                         <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
+
+                        <div class="book_edit"> 
+                            <p class="book_edit_texarea">Фото: <input type="text" name="img" placeholder="<?=$strSQL['img']?>"> </p>
+                            <p class="book_edit_texarea">Название: <input type="text" name="img" placeholder="<?=$strSQL['name']?>">  </p>
+                            <p class="book_edit_texarea">Автор: <input type="text" name="img" placeholder="<?=$strSQL['author']?>">  </p>
+                            <p class="book_edit_texarea">Оценка: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
+                            <p class="book_edit_texarea">Статус: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
+                        </div>
 					<?php
 					echo '</div>';
 				} 
