@@ -1,7 +1,7 @@
 <?php
     $localhost="localhost";
     $login="root";
-    $password="";
+    $password="root";
     $name="database_mainproject";
     
     $connect=mysqli_connect(
