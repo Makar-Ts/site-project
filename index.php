@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://atuin.ru/demo/wow/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -72,7 +73,7 @@
 				while($strSQL = mysqli_fetch_assoc($base)) { 
 					echo '<div class="book wow animate__animated animate__fadeInLeft">'
 					?>             
-                        <div class="book_inf"> 
+                        <div class="book_inf" id="<?=$strSQL['ID']?>"> 
                             <div class="book_name"> 
                                 <?php echo $strSQL['name']; ?>
                             </div>
@@ -82,7 +83,8 @@
                             <div class="book_rate"> 
                                 <p>Оценка: <p class="<?php echo ("book_rate_" . (string)$strSQL['rate']); ?>"><?php echo $strSQL['rate'] ?>/5</p> </p>
                             </div>
-                            <div class="book_delete_button"> <button> <img src="content/trash_can.png"> </button> </div>
+                            <div class="book_action_button"> <button type="button" onclick="delete_book(event)"> <img src="content/trash_can.png"> </button> </div>
+                            <div class="book_action_button"> <button type="button" onclick="edit_book(event)"> <img src="content/edit.png"> </button> </div>
                         </div>
                         <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
 					<?php
@@ -91,6 +93,17 @@
 			?>
 		</div>
 	</div>
-
 </div>
+    
+    <div class="feedback" id="feedback"> 
+        <div class="container"> 
+            <div class="down_about"> 
+
+            </div>
+
+            <div class="feedback_"> 
+
+            </div>
+        </div>
+    </div>
 </body>

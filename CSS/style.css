@@ -114,6 +114,7 @@
 	font: 120% Verdana, sans-serif;
 	display: flex;
     flex-direction: row;
+	position:relative;
 
 	background: #F0FFFF;
 	border: solid black;
@@ -136,8 +137,16 @@
 	color: #0047AB;
 }
 
-.book_delete_button{
-	
+.book_action_button button{
+	background: #6495ED;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+.book_action_button button img {
+	width: 90%;
+	height: 90%;
 }
 
 /* Rate classes */
