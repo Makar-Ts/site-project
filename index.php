@@ -88,13 +88,16 @@
                         </div>
                         <div class="book_icn"> <img src="<?php echo $strSQL['img']; ?>"> </div>
 
-                        <div class="book_edit"> 
-                            <p class="book_edit_texarea">Фото: <input type="text" name="img" placeholder="<?=$strSQL['img']?>"> </p>
-                            <p class="book_edit_texarea">Название: <input type="text" name="img" placeholder="<?=$strSQL['name']?>">  </p>
-                            <p class="book_edit_texarea">Автор: <input type="text" name="img" placeholder="<?=$strSQL['author']?>">  </p>
-                            <p class="book_edit_texarea">Оценка: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
-                            <p class="book_edit_texarea">Статус: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
-                        </div>
+                        <form class="book_edit"> 
+                            <p class="book_edit_textarea">Фото: <input type="text" name="img" placeholder="<?=$strSQL['img']?>"> </p>
+                            <p class="book_edit_textarea">Название: <input type="text" name="img" placeholder="<?=$strSQL['name']?>">  </p>
+                            <p class="book_edit_textarea">Автор: <input type="text" name="img" placeholder="<?=$strSQL['author']?>">  </p>
+                            <p class="book_edit_textarea">Оценка: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
+                            <p class="book_edit_textarea">Статус: <input type="text" name="img" placeholder="<?=$strSQL['rate']?>">  </p>
+
+                            <div class="book_edit_button"> <button type="button" onclick="edit_book_accept(event)"> <img src="content/checkmark.png"> </button> </div>
+                            <div class="book_edit_button"> <button type="button" onclick="edit_book_unaccept(event)"> <img src="content/cross.png"> </button> </div>
+                        </form>
 					<?php
 					echo '</div>';
 				} 

@@ -154,14 +154,56 @@
 	font: 120% Verdana, sans-serif;
 	display: flex;
     flex-direction: column;
+	justify-content: center;
+    align-items: flex-end;
 	position: absolute;
 
 	width: 1000px;
 	height: 300px;
+	top: 45px;
+	left: -1000px;
 
 	background:	#89CFF0;
 	border: solid black;
 	border-left: none;
+}
+
+.book_edit.active{
+	font: 120% Verdana, sans-serif;
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: flex-end;
+	position: absolute;
+
+	width: 1000px;
+	height: 300px;
+	top: 45px;
+	left: -200px;
+
+	background:	#89CFF0;
+	border: solid black;
+	border-left: none;
+}
+
+.book_edit_textarea{
+	padding-right: 20px;
+}
+
+.book_edit_button{
+	padding-right: 20px;
+}
+
+.book_edit_button button{
+	background: #6495ED;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+.book_edit_button button img {
+	width: 90%;
+	height: 90%;
 }
 
 /* Rate classes */
