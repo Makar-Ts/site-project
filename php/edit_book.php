@@ -6,7 +6,7 @@
     $name   = $_POST['name'];
     $author = $_POST['author'];
     $rate   = (int)$_POST['rate'];
-    $status = $_POST['status'];
+    $status = (int)$_POST['status'];
 
     $book = mysqli_query($connect, "SELECT * FROM `books` WHERE `ID`=$id");
 
@@ -25,6 +25,9 @@
     }
     if(!is_nan($rate) && $rate) {
         $querySql[] = "rate = '{$rate}'";
+    }
+    if(!is_nan($status) && $status) {
+        $querySql[] = "status = '{$status}'";
     }
     $query = implode(",", $querySql);
     /*

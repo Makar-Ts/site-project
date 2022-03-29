@@ -226,3 +226,17 @@
 .book_rate_5 {
 	color: rgb(145, 214, 42);
 }
+
+/* Books statuses */
+
+.book_status_0 {
+	color: red;
+}
+
+.book_status_1 {
+	color: orange;
+}
+
+.book_status_2 {
+	
+}

@@ -18,6 +18,8 @@
 	<?php 
 		include "config/config.php";
 		mysqli_set_charset($connect, "utf8mb4");
+
+        $statuses = ['нет в продаже', 'на заказ', 'есть на складе', 'есть в ближайшем магазине'];
 	?>
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -82,6 +84,10 @@
                             </div>
                             <div class="book_rate"> 
                                 <p>Оценка: <p class="<?php echo ("book_rate_" . (string)$strSQL['rate']); ?>"><?php echo $strSQL['rate'] ?>/5</p> </p>
+                            </div>
+                            <div class="book_rate"> 
+                                <p>Статус: <?php $book_class = "book_status_" .(int)$strSQL['status']; 
+                                                 echo "<p class='$book_class'>" .$statuses[(int)$strSQL['status']] ."</p>"; ?></p>
                             </div>
                             <div class="book_action_button"> <button type="button" onclick="delete_book(event)"> <img src="content/trash_can.png"> </button> </div>
                             <div class="book_action_button"> <button type="button" onclick="edit_book(event)"> <img src="content/edit.png"> </button> </div>
