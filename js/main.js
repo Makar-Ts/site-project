@@ -58,7 +58,7 @@ function edit_book_accept(event) {
         book_name = element.querySelector('input[name="name"]').value;
         author = element.querySelector('input[name="author"]').value;
         rate = parseInt(element.querySelector('input[name="rate"]').value);
-        book_status = parseInt(element.querySelector('input[name="status"]').value);
+        book_status = parseInt(element.querySelector('input[name="status"]').value)-1;
     
     alert(book_id+" "+img+" "+book_name+" "+author+" "+rate+" "+book_status);
 

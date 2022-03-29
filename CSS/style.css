@@ -61,6 +61,13 @@
 }
 .header_link:hover{ background-color: #A7C7E7; }
 
+
+.edit_menu {
+	position: absolute;
+
+	background: #ADD8E6;
+}
+
 /*====================================================*/
 
 .about{
@@ -152,7 +159,7 @@
 
 .book_edit{
 	font: 120% Verdana, sans-serif;
-	display: flex;
+	display: none;
     flex-direction: column;
 	justify-content: center;
     align-items: flex-end;
@@ -161,7 +168,6 @@
 	width: 1000px;
 	height: 300px;
 	top: 45px;
-	left: -1000px;
 
 	background:	#89CFF0;
 	border: solid black;
@@ -206,7 +212,22 @@
 	height: 90%;
 }
 
+.book_add_button {
+	margin: 8px 0px 0px 8px;
+}
+
+.book_add_button button {
+	padding: 8px 100px;
+	border-radius: 10px;
+
+	background: #6495ED;
+}
+
 /* Rate classes */
+
+.book_rate_1, .book_rate_2, .book_rate_3, .book_rate_4, .book_rate_5 {
+	display: inline;
+}
 
 .book_rate_1 {
 	color: red;
@@ -229,6 +250,10 @@
 
 /* Books statuses */
 
+.book_status_0, .book_status_1, .book_status_2, .book_status_3 {
+	display: inline;
+}
+
 .book_status_0 {
 	color: red;
 }
@@ -238,5 +263,9 @@
 }
 
 .book_status_2 {
-	
+	color: #80AD00;
+}
+
+.book_status_3 {
+	color: rgb(145, 214, 42);
 }

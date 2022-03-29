@@ -39,6 +39,17 @@
                         <li> <a href="#feedback" class="header_link">Обратная связь</a></li>
                     </ul>
                 </nav>
+
+                <div class="edit_menu" id="edit_menu"> 
+                    <p class="book_add_textarea">Фото: <input type="text" name="img"> </p>
+                    <p class="book_add_textarea">Название: <input type="text" name="name">  </p>
+                    <p class="book_add_textarea">Автор: <input type="text" name="author">  </p>
+                    <p class="book_add_textarea">Оценка: <input type="text" name="rate">  </p>
+                    <p class="book_add_textarea">Статус: <input type="text" name="status">  </p>
+
+                    <div class="book_edit_button"> <button type="button" onclick="add_book_accept(event)"> <img src="content/checkmark.png"> </button> </div>
+                    <div class="book_edit_button"> <button type="button" onclick="add_book_unaccept(event)"> <img src="content/cross.png"> </button> </div>
+                </div>
             </div>
         </div>
     </div>
@@ -83,11 +94,11 @@
                                 <p>Автор: <?php echo $strSQL['author']; ?> </p>
                             </div>
                             <div class="book_rate"> 
-                                <p>Оценка: <p class="<?php echo ("book_rate_" . (string)$strSQL['rate']); ?>"><?php echo $strSQL['rate'] ?>/5</p> </p>
+                                Оценка: <div class="<?php echo ("book_rate_" . (string)$strSQL['rate']); ?>"><?php echo $strSQL['rate'] ?>/5</div>
                             </div>
                             <div class="book_rate"> 
-                                <p>Статус: <?php $book_class = "book_status_" .(int)$strSQL['status']; 
-                                                 echo "<p class='$book_class'>" .$statuses[(int)$strSQL['status']] ."</p>"; ?></p>
+                                Статус: <?php $book_class = "book_status_" .(int)$strSQL['status']; 
+                                                 echo "<div class='$book_class'>" .$statuses[(int)$strSQL['status']] ."</div>"; ?>
                             </div>
                             <div class="book_action_button"> <button type="button" onclick="delete_book(event)"> <img src="content/trash_can.png"> </button> </div>
                             <div class="book_action_button"> <button type="button" onclick="edit_book(event)"> <img src="content/edit.png"> </button> </div>
@@ -108,6 +119,7 @@
 					echo '</div>';
 				} 
 			?>
+            <div class="book_add_button"> <button type="button" onclick="add_book(event)"> Добавить книгу </button> </div>
 		</div>
 	</div>
 </div>
