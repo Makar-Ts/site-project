@@ -39,16 +39,20 @@
                         <li> <a href="#feedback" class="header_link">Обратная связь</a></li>
                     </ul>
                 </nav>
+                <div class="add_menu_background">
+                    <div class="add_menu" id="add_menu"> 
+                        <p class="book_add_h"> Добавление новой книги </p>
+                        <p class="book_add_textarea">Фото: <input type="text" name="img" placeholder="img URL from mybook.ru"> </p>
+                        <p class="book_add_textarea">Название: <input type="text" name="name" placeholder="Book name">  </p>
+                        <p class="book_add_textarea">Автор: <input type="text" name="author" placeholder="Book author">  </p>
+                        <p class="book_add_textarea">Оценка: <input type="text" name="rate" placeholder="book rate (from 1 to 5)">  </p>
+                        <p class="book_add_textarea">Статус: <input type="text" name="status" placeholder="book status (from 1 to 4)">  </p>
 
-                <div class="edit_menu" id="edit_menu"> 
-                    <p class="book_add_textarea">Фото: <input type="text" name="img"> </p>
-                    <p class="book_add_textarea">Название: <input type="text" name="name">  </p>
-                    <p class="book_add_textarea">Автор: <input type="text" name="author">  </p>
-                    <p class="book_add_textarea">Оценка: <input type="text" name="rate">  </p>
-                    <p class="book_add_textarea">Статус: <input type="text" name="status">  </p>
-
-                    <div class="book_edit_button"> <button type="button" onclick="add_book_accept(event)"> <img src="content/checkmark.png"> </button> </div>
-                    <div class="book_edit_button"> <button type="button" onclick="add_book_unaccept(event)"> <img src="content/cross.png"> </button> </div>
+                        <div class="book_add_button_leveler">
+                            <div class="book_add_button2"> <button type="button" onclick="add_book_accept(event)"> <img src="content/checkmark.png"> </button> </div>
+                            <div class="book_add_button2"> <button type="button" onclick="add_book_unaccept(event)"> <img src="content/cross.png"> </button> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +114,7 @@
                             <p class="book_edit_textarea">Название: <input type="text" name="name" placeholder="<?=$strSQL['name']?>">  </p>
                             <p class="book_edit_textarea">Автор: <input type="text" name="author" placeholder="<?=$strSQL['author']?>">  </p>
                             <p class="book_edit_textarea">Оценка: <input type="text" name="rate" placeholder="<?=$strSQL['rate']?>">  </p>
-                            <p class="book_edit_textarea">Статус: <input type="text" name="status" placeholder="<?=$strSQL['rate']?>">  </p>
+                            <p class="book_edit_textarea">Статус: <input type="text" name="status" placeholder="<?=$strSQL['status']+1?>">  </p>
 
                             <div class="book_edit_button"> <button type="button" onclick="edit_book_accept(event)"> <img src="content/checkmark.png"> </button> </div>
                             <div class="book_edit_button"> <button type="button" onclick="edit_book_unaccept(event)"> <img src="content/cross.png"> </button> </div>
@@ -126,12 +130,34 @@
     
     <div class="feedback" id="feedback"> 
         <div class="container"> 
-            <div class="down_about"> 
+            <div class="feedback_body wow animate__animated animate__fadeInLeft"> 
+                <p class="feedback_title">
+                    Пожалуйста отправьте отзыв!
+                </p>
 
-            </div>
+                <div class="form_input" id="form_input">
+                    <div class="feedback_name">
+                        Имя:
+                    </div>
+                    <input type="text" class="feedback_input" name="name" placeholder="Ваше имя"/>
 
-            <div class="feedback_"> 
+                    <div class="feedback_name">
+                        Телефон:
+                    </div>
+                    <input type="text" class="feedback_input" name="phone" placeholder="Ваш телефон"/>
 
+                    <div class="feedback_name">
+                        Почта:
+                    </div>
+                    <input type="text" class="feedback_input" name="mail" placeholder="Ваша почта"/>
+
+                    <div class="feedback_name">
+                        Комментарий:
+                    </div>
+                    <textarea id="feedback_textarea" class="feedback_textarea" name="comm" placeholder="Ваш коментарий"></textarea>
+
+                    <div class="feedback_button"> <button type="button" onclick="feedback_send(event)">Отправить</button> </div>
+                </div>
             </div>
         </div>
     </div>
